@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+
+  #Postgres Service
+  simple_bank_postgres:
+    image: postgres:13.4
+    container_name: simple_bank_postgres
+    tty: true
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=root
+      - POSTGRES_PASSWORD=secret
