@@ -13,7 +13,10 @@ rollback:
 sqlc:
 	sqlc generate
 
+test:
+	go test -v -cover ./...
 
-.PHONY: createdb dropdb migrate rollback sqlc
+
+.PHONY: createdb dropdb migrate rollback sqlc test
 
 	
