@@ -14,6 +14,11 @@ RETURNING *;
 SELECT * FROM accounts
 WHERE id = $1 LIMIT 1;
 
+-- name: GetRandomAccount :one
+SELECT * FROM accounts
+ORDER BY RANDOM()
+LIMIT 1;
+
 -- name: ListAccounts :many
 SELECT * FROM accounts
 ORDER BY id
